@@ -1,20 +1,24 @@
-"use client"
+'use client';
 
-/* eslint-disable @next/next/no-img-element */
-import { usePokemonImage } from "@/registry/new-york/complex-component/hooks/use-pokemon"
+import { usePokemonImage } from '@/registry/new-york/complex-component/hooks/use-pokemon';
 
-export function PokemonImage({
+export const PokemonImage = ({
   name,
   number,
 }: {
-  name: string
-  number: number
-}) {
-  const imageUrl = usePokemonImage(number)
+  name: string;
+  number: number;
+}) => {
+  const imageUrl = usePokemonImage(number);
 
   if (!imageUrl) {
-    return null
+    return null;
   }
 
-  return <img src={imageUrl} alt={name} />
-}
+  return (
+    <img
+      src={imageUrl}
+      alt={name}
+    />
+  );
+};
