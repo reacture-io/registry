@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, type FC, useCallback, useContext } from 'react';
 
 import { useComposition } from '@/hooks/use-composition';

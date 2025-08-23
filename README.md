@@ -116,10 +116,9 @@ Extended from the official shadcn registry template with categorized sidebar nav
    ```tsx
    // app/page.tsx
    <Component
-     name="your-component"
-     description="Component description"
-     code={`<YourComponent />`}
-   >
+     name='your-component'
+     description='Component description'
+     code={`<YourComponent />`}>
      <YourComponent />
    </Component>
    ```

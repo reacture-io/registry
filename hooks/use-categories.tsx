@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import registry from '@/registry.json';
+import registry from "@/registry.json";
 
 type RegistryItem = (typeof registry.items)[number];
 
@@ -8,7 +8,7 @@ interface UseCategoriesProps {
   defaultCategory?: string;
 }
 export function useCategories({
-  defaultCategory = 'components',
+  defaultCategory = "components",
 }: UseCategoriesProps = {}) {
   const categories = useMemo(() => {
     const set = new Set<string>();
@@ -29,7 +29,7 @@ export function useCategories({
         map.set(
           category,
           registry.items.filter(
-            (item) => !item.categories || item.categories?.length === 0
+            (item) => !item.categories || item.categories.length === 0
           )
         );
       } else {
@@ -41,7 +41,7 @@ export function useCategories({
     });
 
     return map;
-  }, [categories]);
+  }, [categories, defaultCategory]);
 
   return { categories, itemsPerCategory };
 }
