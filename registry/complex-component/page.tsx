@@ -1,7 +1,7 @@
-import { cache } from "react";
+import { cache } from 'react';
 
-import { PokemonCard } from "@/registry/complex-component/components/pokemon-card";
-import { getPokemonList } from "@/registry/complex-component/lib/pokemon";
+import { PokemonCard } from '@/registry/complex-component/components/pokemon-card';
+import { getPokemonList } from '@/registry/complex-component/lib/pokemon';
 
 const getCachedPokemonList = cache(getPokemonList);
 
@@ -13,10 +13,13 @@ const Page = async () => {
   }
 
   return (
-    <div className="mx-auto w-full max-w-2xl px-4">
-      <div className="grid grid-cols-2 gap-4 py-10 sm:grid-cols-3 md:grid-cols-4">
+    <div className='mx-auto w-full max-w-2xl px-4'>
+      <div className='grid grid-cols-2 gap-4 py-10 sm:grid-cols-3 md:grid-cols-4'>
         {pokemons.results.map((pokemon) => (
-          <PokemonCard key={pokemon.name} name={pokemon.name} />
+          <PokemonCard
+            key={pokemon.name}
+            name={pokemon.name}
+          />
         ))}
       </div>
     </div>

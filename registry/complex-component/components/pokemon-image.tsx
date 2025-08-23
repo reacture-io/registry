@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { usePokemonImage } from "@/registry/complex-component/hooks/use-pokemon";
+import { usePokemonImage } from '@/registry/complex-component/hooks/use-pokemon';
 
 export const PokemonImage = ({
   name,
@@ -15,5 +15,10 @@ export const PokemonImage = ({
     return null;
   }
 
-  return <img src={imageUrl} alt={name} />;
+  return (
+    <img
+      src={imageUrl}
+      alt={name}
+    />
+  );
 };

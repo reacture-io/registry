@@ -28,7 +28,8 @@
           "path": "registry/example-form/example-form.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "categories": ["form", "blocks"]
     },
     {
       "name": "complex-component",
@@ -58,7 +59,8 @@
           "path": "registry/complex-component/hooks/use-pokemon.ts",
           "type": "registry:hook"
         }
-      ]
+      ],
+      "categories": ["blocks"]
     }
   ]
 }

@@ -1,8 +1,8 @@
-import { cache } from "react";
+import { cache } from 'react';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { PokemonImage } from "@/registry/complex-component/components/pokemon-image";
-import { getPokemon } from "@/registry/complex-component/lib/pokemon";
+import { Card, CardContent } from '@/components/ui/card';
+import { PokemonImage } from '@/registry/complex-component/components/pokemon-image';
+import { getPokemon } from '@/registry/complex-component/lib/pokemon';
 
 const cachedGetPokemon = cache(getPokemon);
 
@@ -15,11 +15,14 @@ export const PokemonCard = async ({ name }: { name: string }) => {
 
   return (
     <Card>
-      <CardContent className="flex flex-col items-center p-2">
+      <CardContent className='flex flex-col items-center p-2'>
         <div>
-          <PokemonImage name={pokemon.name} number={pokemon.id} />
+          <PokemonImage
+            name={pokemon.name}
+            number={pokemon.id}
+          />
         </div>
-        <div className="text-center font-medium">{pokemon.name}</div>
+        <div className='text-center font-medium'>{pokemon.name}</div>
       </CardContent>
     </Card>
   );
