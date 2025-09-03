@@ -9,7 +9,7 @@
       "title": "Toggle",
       "description": "A toggle component",
       "dependencies": [],
-      "registryDependencies": ["https://ui.reacture.io/r/use-composition"],
+      "registryDependencies": ["@reacture/use-composition"],
       "files": [
         {
           "path": "registry/components/toggle.tsx",
@@ -87,7 +87,7 @@
       "title": "Country Combobox",
       "description": "A country combobox component",
       "dependencies": ["react-country-flag", "@reacture-io/iso-locale"],
-      "registryDependencies": ["https://ui.reacture.io/r/combobox"],
+      "registryDependencies": ["@reacture/combobox"],
       "files": [
         {
           "path": "registry/components/country-combobox.tsx",
@@ -102,7 +102,7 @@
       "title": "Language Combobox",
       "description": "A language combobox component",
       "dependencies": ["@reacture-io/iso-locale"],
-      "registryDependencies": ["https://ui.reacture.io/r/combobox"],
+      "registryDependencies": ["@reacture/combobox"],
       "files": [
         {
           "path": "registry/components/language-combobox.tsx",
