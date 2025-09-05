@@ -4,6 +4,18 @@ A shadcn/ui component registry for distributing components, hooks, pages, and ut
 
 Extended from the official shadcn registry template with categorized sidebar navigation, component previews, and installation commands.
 
+# Usage
+
+Add the following configuration to your `components.json`:
+
+```json
+{
+  "registries": {
+    "@reacture": "https://registry.reacture.io/r/{name}.json" // ✅ Good
+  }
+}
+```
+
 ## ✨ Features
 
 ### 🚀 Enhanced from shadcn/ui Registry Template
@@ -23,13 +35,6 @@ Extended from the official shadcn registry template with categorized sidebar nav
 - TypeScript support
 
 ## 🏗️ Architecture
-
-### Enhanced Components
-
-- **`<Component />`**: Component display with preview/code toggle, installation commands, and v0 integration
-- **`<AppSidebar />`**: Navigation sidebar with collapsible categories
-- **`<Install />`**: Installation widget with package manager selection
-- **`useCategories`**: Hook for sidebar organization
 
 ### Registry Structure
 
@@ -116,9 +121,10 @@ Extended from the official shadcn registry template with categorized sidebar nav
    ```tsx
    // app/page.tsx
    <Component
-     name='your-component'
-     description='Component description'
-     code={`<YourComponent />`}>
+     name="your-component"
+     description="Component description"
+     code={`<YourComponent />`}
+   >
      <YourComponent />
    </Component>
    ```
@@ -177,12 +183,7 @@ Powered by Shiki with customizable themes:
 
 ```bash
 # Install components using shadcn CLI
-npx shadcn@latest add <component-name>
-
-# Or with other package managers
-pnpm dlx shadcn@latest add <component-name>
-yarn shadcn add <component-name>
-bun x shadcn@latest add <component-name>
+pnpm dlx shadcn@latest add @reacture/{name}
 ```
 
 ### For Registry Maintainers
